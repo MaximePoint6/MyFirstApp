@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="HabitEntity" representedClassName="HabitEntity" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="imageURL" optional="YES" attributeType="URI"/>
+        <attribute name="isFavourite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="stringDescription" optional="YES" attributeType="String"/>
+        <relationship name="timeSlots" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SpentTimeEntity"/>
+    </entity>
+    <entity name="SpentTimeEntity" representedClassName="SpentTimeEntity" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="minutes" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="HabitEntity" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="SpentTimeEntity" positionX="-54" positionY="-18" width="128" height="74"/>
+    </elements>
+</model>
