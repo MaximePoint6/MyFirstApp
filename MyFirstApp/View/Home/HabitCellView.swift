@@ -43,7 +43,7 @@ struct HabitCellView_Previews: PreviewProvider {
         let  habitEntity = HabitEntity(context: persistentController.container.viewContext)
         habitEntity.id = UUID()
         habitEntity.isFavourite = true
-        habitEntity.name = "Habitude test"
+        habitEntity.name = "Habit test"
         habitEntity.stringDescription = "Description test"
         habitEntity.imageURL = URL(string : "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
         return habitEntity
